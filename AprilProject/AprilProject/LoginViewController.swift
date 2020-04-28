@@ -35,7 +35,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func passwordTapGesture(_ sender: UITapGestureRecognizer) {
         validationField.textColor = UIColor.systemBlue
-         validationField.text = "Aa-Zz, 0-9 & Symbols Only"
+        validationField.text = "Aa-Zz, 0-9 & Symbols Only"
         loginPassword.isSecureTextEntry = false
         hideButton.isHidden = false
         passwordInfoImage.isHidden = true
@@ -75,18 +75,18 @@ class LoginViewController: UIViewController {
             
             let vc = UIStoryboard(name: "Main", bundle: nil)
             if let viewC = vc.instantiateViewController(identifier: "notificationMessagesVC") as? UINavigationController{
-                
-                addChild(viewC)
-                view.addSubview(viewC.view)
-                viewC.didMove(toParent: self)
+                viewC.modalPresentationStyle = .fullScreen
+                present(viewC, animated: true, completion: nil)
             }
         }
     }
+        
     func isValidEmail(emailID:String) -> Bool {
         let emailTest = NSPredicate(format:"SELF MATCHES %@", "[0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}")
         return emailTest.evaluate(with: emailID)
     }
-    func isValidPassword(passwordID : String) -> Bool{
+    
+    func isValidPassword(passwordID : String) -> Bool {
         let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{6,}")
         return passwordTest.evaluate(with: passwordID)
     }

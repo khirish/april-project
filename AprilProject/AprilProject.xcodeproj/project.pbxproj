@@ -18,6 +18,8 @@
 		8D405CA3243DEF40004B0F74 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D405CA2243DEF40004B0F74 /* LoginViewController.swift */; };
 		8D6B563A243ED1C0003FB88B /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B5639243ED1C0003FB88B /* NotificationViewController.swift */; };
 		8D6B563C243ED4C9003FB88B /* NotificationCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B563B243ED4C9003FB88B /* NotificationCellTableViewCell.swift */; };
+		8D936A3C2451AE4E00FACCD7 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D936A3B2451AE4E00FACCD7 /* ForgotPasswordViewController.swift */; };
+		8DD8576A244FD736001F8CE7 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD85769244FD736001F8CE7 /* MessageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		8D405CA2243DEF40004B0F74 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8D6B5639243ED1C0003FB88B /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		8D6B563B243ED4C9003FB88B /* NotificationCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCellTableViewCell.swift; sourceTree = "<group>"; };
+		8D936A3B2451AE4E00FACCD7 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		8DD85769244FD736001F8CE7 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 				8D6B5639243ED1C0003FB88B /* NotificationViewController.swift */,
 				8D6B563B243ED4C9003FB88B /* NotificationCellTableViewCell.swift */,
 				8D3108BA244451F90024E4C3 /* CreateAccountViewController.swift */,
+				8DD85769244FD736001F8CE7 /* MessageViewController.swift */,
+				8D936A3B2451AE4E00FACCD7 /* ForgotPasswordViewController.swift */,
 				8D405C78243DC158004B0F74 /* Main.storyboard */,
 				8D405C7B243DC15D004B0F74 /* Assets.xcassets */,
 				8D405C7D243DC15D004B0F74 /* LaunchScreen.storyboard */,
@@ -268,12 +274,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D936A3C2451AE4E00FACCD7 /* ForgotPasswordViewController.swift in Sources */,
 				8D3108BB244451F90024E4C3 /* CreateAccountViewController.swift in Sources */,
 				8D6B563C243ED4C9003FB88B /* NotificationCellTableViewCell.swift in Sources */,
 				8D6B563A243ED1C0003FB88B /* NotificationViewController.swift in Sources */,
 				8D405CA3243DEF40004B0F74 /* LoginViewController.swift in Sources */,
 				8D405C73243DC158004B0F74 /* AppDelegate.swift in Sources */,
 				8D405C75243DC158004B0F74 /* SceneDelegate.swift in Sources */,
+				8DD8576A244FD736001F8CE7 /* MessageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

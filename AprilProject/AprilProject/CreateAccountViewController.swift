@@ -58,7 +58,7 @@ class CreateAccountViewController: UIViewController {
                 return
             }
             if isValidName(nameID: name) == false{
-                contentLabel.text = "Incorrect Name"
+                contentLabel.text = "Invalid Name"
                 return
             }
             guard let email = emailAddressText.text, emailAddressText.text?.count != 0
@@ -67,7 +67,7 @@ class CreateAccountViewController: UIViewController {
                 return
             }
             if isValidEmail(emailID: email) == false{
-                contentLabel.text = "Incorrect Email Address"
+                contentLabel.text = "Invalid Email Address"
                 return
             }
             guard let password = passwordText.text, passwordText.text?.count != 0
@@ -76,7 +76,7 @@ class CreateAccountViewController: UIViewController {
                 return
             }
             if isValidPassword(passwordID: password) == false{
-                contentLabel.text = "Incorrect Password Type"
+                contentLabel.text = "Invalid Password Type"
                 return
             }
             guard let securityKey = contactNumberText.text, contactNumberText.text?.count != 0
@@ -85,7 +85,7 @@ class CreateAccountViewController: UIViewController {
                 return
             }
             if isValidsecurityKey(securityKeyID: securityKey) == false && contactNumberText.text?.count != 8{
-                contentLabel.text = "Incorrect Contact No"
+                contentLabel.text = "Invalid Contact No"
                 return
             }
             guard countryText.text?.count != 0
@@ -96,7 +96,8 @@ class CreateAccountViewController: UIViewController {
             contentLabel.text = "LOGIN SUCESSFULL!"
             contentLabel.textColor = UIColor.systemGreen
             
-            let vc = storyboard?.instantiateViewController(withIdentifier: "notificationMessagesVC") as! UINavigationController
+            let vc = storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
+            vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true, completion: nil)
         }
     }
@@ -119,7 +120,6 @@ class CreateAccountViewController: UIViewController {
 }
 
 extension CreateAccountViewController: UIPickerViewDelegate {
-    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -129,7 +129,6 @@ extension CreateAccountViewController: UIPickerViewDelegate {
 }
 
 extension CreateAccountViewController: UIPickerViewDataSource {
-    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         countryText.text = countryPickerData[row]
         countryPickerView.isHidden = true
